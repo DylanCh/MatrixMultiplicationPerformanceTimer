@@ -30,5 +30,14 @@ namespace MatrixMultiplicationPerformanceTimer{
 		    }
 	    }
     }
+    
+    public void populate(){
+    	for (int row = 0; row <x; j++){
+		for (int col = 0; col<n; k++){
+			a[col][row]=2;
+			b[col][row]=3;
+		}
+	}
+    }
   }
 }
