@@ -38,7 +38,7 @@ namespace MatrixMultiplicationPerformanceTimer{
 	    return result;
     }
     
-    public static void populate(int x,int n, double matrix){
+    public static void populate(double matrix){
     	for (int row = 0; row < matrix.getLength(0); j++){
 		for (int col = 0; col < matrix.getLength(1); k++){
 			matrix[col][row]=2;
