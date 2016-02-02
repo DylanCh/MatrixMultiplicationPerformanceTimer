@@ -7,10 +7,16 @@ namespace MatrixMultiplicationPerformanceTimer{
   public class program {
     public static void Main(){
       Matrix matrix = new Matrix();
-      matrix.populate();
+      Matrix.populate(matrix.a);
+      Matrix.populate(matrix.b);
+      
+      double[][] result;
+      
       HiPerfTimer timer = new HiperfTimer();
+      
       timer.Start();
-      // do multiplication matrix.multiplication();
+      // do multiplication 
+      result = matrix.multiplication();
       timer.Stop();  
     }
   }
