@@ -1,19 +1,19 @@
 using System;
 
 namespace MatrixMultiplicationPerformanceTimer{
-  public class MatrixMultiplication{
+  public class Matrix{
     public int x;
     public int y;
     public int m;
     public int n;
     
     // Default: 8x8 matrix
-    public MatrixMultiplication(){
+    public Matrix(){
       x=y=m=n=8;
     }
     
     // Customize matrix
-    public MatrixMultiplication(int x, iny, int m, int n){
+    public Matrix(int x, iny, int m, int n){
       this.x = x;
       this.y = y;
       this.m = m;
