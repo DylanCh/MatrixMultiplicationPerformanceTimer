@@ -43,12 +43,19 @@ namespace MatrixMultiplicationPerformanceTimer{
 	    return result;
     }
     
-    public static void populate(double[][] matrix){
-    	for (int row = 0; row < matrix.GetLength(0); row++){
-		    for (int col = 0; col < matrix.GetLength(1); col++){
-			    matrix[col][row]=2;
+	public void populate(){
+		//double[][] matrix;
+		try{
+    	for (int row = 0; row < x; row++){
+		    for (int col = 0; col < n; col++){
+			    this.a[col][row]=2;
+				this.b [col] [row] = 2;
+					}
 			}
 	    }
+			catch(System.NullReferenceException e){
+				Console.WriteLine(e);
+			}
     } // end method
 
     public void print() { 
