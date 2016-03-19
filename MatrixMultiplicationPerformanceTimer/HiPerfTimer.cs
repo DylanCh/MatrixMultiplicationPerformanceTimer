@@ -5,18 +5,22 @@ using System.Threading;
 
 namespace MatrixMultiplicationPerformanceTimer
 {
-    internal class HiPerfTimer
+	public class HiPerfTimer
     {
-        [DllImport("Kernel32.dll")]
+		[DllImport("Kernel32.dll", EntryPoint="QueryPerformanceCounter")]
         private static extern bool QueryPerformanceCounter(
             out long lpPerformanceCount);
 
-        [DllImport("Kernel32.dll")]
+		[DllImport("Kernel32.dll",EntryPoint="QueryPerformanceCounter")]
         private static extern bool QueryPerformanceFrequency(
             out long lpFrequency);
 
         private long startTime, stopTime;
-        private long freq;
+		private long freq;// { set; get;}
+
+		public long getFreq(){
+			return freq;
+		}
 
         // Constructor
         public HiPerfTimer()
