@@ -6,18 +6,18 @@ using System.Threading;
 namespace MatrixMultiplicationPerformanceTimer{
   public class program {
     public static void Main(){
-      Matrix matrix = new Matrix();
-      Matrix.populate(matrix.a);
-      Matrix.populate(matrix.b);
+      Matrix matrix = new Matrix(8,8,8,8);
+	  matrix.populate();
       
       double[][] result;
       
-      HiPerfTimer timer = new HiperfTimer();
-      
+      HiPerfTimer timer = new HiPerfTimer();
+			Console.WriteLine ("Duration: ");
       timer.Start();
       // do multiplication 
       result = matrix.multiplication();
       timer.Stop();  
-    }
-  }
+			Console.WriteLine (timer.Duration.ToString());
+  		}
+	}
 }
